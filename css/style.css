@@ -452,8 +452,11 @@ body {
 }
 
 .contact-info h2 {
-    font-size: 24px;
     margin-bottom: 10px;
+    font-family: "Old Standard TT", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .contact-info p {
@@ -501,7 +504,7 @@ body {
 }
 
 .contact-image img {
-    width: 100%;
+    width: 65%;
     border-radius: 10px;
 }
 
@@ -560,20 +563,6 @@ body {
     background-color: #555;
 }
 
-
-@media (max-width: 768px) {
-    /* Hide all list items initially */
-    #corporate-services ul li,
-    #personal-services ul li {
-        display: none;
-    }
-
-    /* Show only the first list item */
-    #corporate-services ul li:first-child,
-    #personal-services ul li:first-child {
-        display: block;
-    }
-}
 
 /* Prevent horizontal scrolling */
 html, body {

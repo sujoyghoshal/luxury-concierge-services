@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        @media (max-width: 768px) {
+            .personal-services {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .personal-text, .personal-image {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
    <!-- Navigation Bar -->
@@ -20,9 +32,6 @@
 </nav>
     <!-- Personal Concierge Services Section -->
     <section id="personal-services" class="personal-services">
-        <div class="personal-image">
-            <img src="/images/pic3.jpg" alt="Personal Concierge">
-        </div>
         <div class="personal-text">
             <h2>PERSONAL CONCIERGE SERVICES:</h2>
             <hr style="width: 570px;">
@@ -79,6 +88,9 @@
                         sourcing rare items, all tailored to your specific needs, delivered with care and discretion.</p>
                 </li>
             </ul>
+        </div>
+        <div class="personal-image">
+            <img src="/images/pic3.jpg" alt="Personal Concierge">
         </div>
     </section>
     <!-- Footer -->
