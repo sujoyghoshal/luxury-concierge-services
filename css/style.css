@@ -142,8 +142,8 @@ body {
 }
 
 .btn:hover {
-    background: white;
-    color: black;
+    background: black;
+    color:white;
 }
 
 /* About Section */
