@@ -244,13 +244,6 @@ body {
     flex-direction: row-reverse;
 }
 
-.explore-services h2 {
-    font-family: "Old Standard TT", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 5%;
-}
-
 /* CTA Button */
 .cta-button {
     display: inline-block;
@@ -373,7 +366,7 @@ body {
       padding-right: 5%;
       justify-content: center;
     }
-  }
+}
 /* Corporate & Personal Concierge Services */
 .corporate-services,
 .personal-services {
@@ -429,10 +422,13 @@ body {
     filter: blur(2px);
 }
 
+
+
 /* contact section */
 .contact-section {
-    padding: 40px 5%;
-    background: white;
+    
+    /* padding: 40px 15%; */
+    background: rgb(250, 247, 245);
 }
 
 .contact-container {
@@ -446,6 +442,7 @@ body {
 
 /* Contact Info */
 .contact-info {
+    padding: 2%;
     width: 100%;
     max-width: 500px;
     text-align: left;
@@ -504,6 +501,7 @@ body {
 }
 
 .contact-image img {
+    margin-top: 17%;
     width: 65%;
     border-radius: 10px;
     margin-bottom: 5%;
