@@ -57,6 +57,8 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        position:absolute;
+        right: 5%;
     }
 
     .menu {
@@ -65,8 +67,9 @@ body {
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: fit-content;
+
     }
 
     .menu li {
@@ -144,71 +147,98 @@ body {
 }
 
 /* About Section */
+/* Global Section Styles */
 .about,
 .services,
 .explore-services,
 .corporate-services,
 .personal-services,
 .contact-section {
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 5%;
-    background-color: rgb(250, 247, 245);
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 5%;
+  background-color: rgb(250, 247, 245);
 }
 
+/* Container for About and Services Sections */
 .about-container,
 .services-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100vw;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
+/* Image Styling */
 .about-image,
 .services-image {
-    width: 30%;
-    height: auto;
-    border-radius: 2px;
+  width: 30%;
+  height: auto;
+  border-radius: 2px;
 }
 
+/* Text Content Styling */
 .about-text,
 .services-text {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-right: 15%;
-    margin-bottom: 5%;
-    padding: 2%;
-    height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  padding: 2%;
+  height: fit-content;
 }
 
 .about-text h2,
 .services-text h2,
 .explore-services h2 {
-    font-family: "Old Standard TT", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 15px;
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .about-text p,
 .services-text p,
 .corporate-text p,
 .personal-text p {
-    font-size: 16px;
-    line-height: 2.3;
-    color: #555;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "width" 100;
+  font-size: 16px;
+  line-height: 2.3;
+  color: #555;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "width" 100;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-container,
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-image,
+  .services-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .about-text,
+  .services-text {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
 /* Reverse Layout */
 .services-container.reverse {
     flex-direction: row-reverse;
@@ -240,20 +270,51 @@ body {
     color: white;
 }
 
-/* Services Section */
+ /* Services Section */
+ .services {
+    padding: 5% 2%;
+    background-color: rgb(250, 247, 245);
+  }
 
-.service-item:hover {
-    transform: scale(0.85);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.services-grid {
-    padding-left: 20%;
-    padding-right: 20%;
+  .services-container {
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
 
-.service-item {
+  /* Image Styling */
+  .services-image {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  /* Text Content */
+  .services-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    margin-left: 5%;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  /* Service Item */
+  .service-item {
     position: relative;
     text-align: center;
     width: 280px;
@@ -261,31 +322,58 @@ body {
     cursor: pointer;
     border-radius: 5px;
     background-color: #6e6e6e;
-    overflow: hidden; /* Ensures everything stays inside the box */
+    overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+  }
 
-.service-item img {
+  .service-item:hover {
+    transform: scale(0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-item img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    opacity: 0.6; /* Makes the image slightly transparent */
-}
+    opacity: 0.6;
+  }
 
-.service-item h3 {
+  .service-item h3 {
     position: absolute;
-    font-family: "Old Standard TT", serif;
-    font-weight: 400;
-    font-style: normal;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff; /* Ensure the text is visible */
+    font-family: "Old Standard TT", serif;
+    color: #ffffff;
     font-size: 2.5rem;
     font-weight: bold;
-    z-index:2;
-}
+    z-index: 2;
+  }
 
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .services-text {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .services-image {
+      width: 100%;
+    }
+
+    .services-grid {
+      padding-left: 5%;
+      padding-right: 5%;
+      justify-content: center;
+    }
+  }
 /* Corporate & Personal Concierge Services */
 .corporate-services,
 .personal-services {
@@ -342,74 +430,24 @@ body {
 }
 
 /* Contact Section */
-.contact {
-    padding: 60px 10%;
+.contact-section {
+    padding: 40px 5%;
     background: white;
 }
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Image first, form second (mobile-first) */
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.contact-info {
-    width: 50%;
-}
-
-.contact-info h2 {
-    font-family: "Old Standard TT", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "width" 100;
-    color: #444;
-    line-height: 1.6;
-}
-
-.contact-info form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-info textarea,
-.contact-info input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.contact-info button {
-    padding: 12px;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s ease;
-}
-
-.contact-info button:hover {
-    background-color: #333;
-}
-
+/* Contact Image */
 .contact-image {
-    width: 45%;
-    padding: 5%;
+    width: 100%;
+    max-width: 400px;
 }
 
 .contact-image img {
@@ -417,13 +455,86 @@ body {
     border-radius: 10px;
 }
 
+/* Contact Info & Form */
+.contact-info {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info textarea,
+.contact-info input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+.contact-info button {
+    padding: 12px 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-info button:hover {
+    background-color: #333;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row; /* Image on the left, form on the right */
+        justify-content: space-between;
+        text-align: left;
+    }
+    
+    .contact-image {
+        width: 45%;
+    }
+    
+    .contact-info {
+        width: 50%;
+    }
+}
+
+
+
 /* Footer */
 .footer {
     background: black;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 5%;
     width: 100%;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Scroll-to-Top Button */
@@ -449,4 +560,31 @@ body {
 
 .scroll-to-top-btn:hover {
     background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    /* Hide all list items initially */
+    #corporate-services ul li,
+    #personal-services ul li {
+        display: none;
+    }
+
+    /* Show only the first list item */
+    #corporate-services ul li:first-child,
+    #personal-services ul li:first-child {
+        display: block;
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Ensure all sections fit within the viewport */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
 }
