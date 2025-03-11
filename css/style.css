@@ -456,7 +456,7 @@ body {
     font-family: "Old Standard TT", serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .contact-info p {
@@ -506,6 +506,7 @@ body {
 .contact-image img {
     width: 65%;
     border-radius: 10px;
+    margin-bottom: 5%;
 }
 
 /* Responsive Design */
@@ -519,6 +520,7 @@ body {
     .contact-info {
         width: 50%;
     }
+
     .contact-image {
         width: 40%;
         margin-top: 0;
